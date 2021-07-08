@@ -1,0 +1,473 @@
+/* @font-face {
+ 	font-family: "Euclid Square";
+ 	src: url("/fonts/euclidsquare-regular-webfont.woff"), format ("woff");
+ }*/
+
+@font-face {
+  font-family: EuclidSquare;
+  src: url("/Users/mihaelayordanova/Low-Fi/Musicians calculator/fonts/euclidsquare-regular-webfont.woff") format("woff");
+  src: url("/Users/mihaelayordanova/Low-Fi/Musicians calculator/fonts/euclidsquare-regular-webfont.woff2") format("woff2");
+}
+
+html, body {
+ 	margin: 0; height: 100%; overflow: hidden
+ }
+
+ /*fonts*/
+
+body {
+ 	font-family: EuclidSquare;
+ }
+
+section {
+ 	height: 100vh;
+ 	width: 100vw;
+ }
+
+h2 {
+	font-size: 32px;
+ 	font-weight: 600;
+ 	width: 30vw;
+ }
+
+ @media only screen and (max-width: 1400px) {
+  h2 {
+    font-size: 26px;
+  }
+}
+
+h3 {
+	font-size: 24px;
+ 	font-weight: 600;
+ 	text-align: center;
+ 	width: 33vw;
+}
+
+@media only screen and (max-width: 1400px) {
+  h3 {
+    font-size: 17px;
+  }
+}
+ 
+p {
+	font-size: 18px;
+ 	font-weight: 600;
+ 	color: #494949
+}
+
+@media only screen and (max-width: 1400px) {
+  p {
+    font-size: 15.5px;
+  }
+}
+
+a {
+	text-decoration: none;
+	text-align: center;
+	font-size: 17px;
+	font-weight: 600;
+}
+
+button {
+	border:none;
+	font-family: EuclidSquare;
+	padding:0;
+	margin: 0;
+}
+
+ 	
+
+ /*Side navigation*/
+
+.wrapper-sidenav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+}
+
+.wrapper-sidenav {
+	display: flex;
+	align-items: center;
+ 
+}
+
+@media only screen and (max-width: 1400px) {
+  .wrapper-sidenav {
+   
+  }
+}
+
+ul {
+	display: flex;
+	flex-direction: column;
+  	justify-content: space-between;
+}  	
+	
+ul {
+	width: 154px;
+	height: 370px;
+	padding-left: 4vw;
+	margin: 0;
+}
+
+@media only screen and (max-width: 1400px) {
+  ul {
+   height: 320px;
+  }
+}
+
+ul li {
+	list-style: none;
+}
+
+
+
+.wrapper-sidenav a {
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: 500;
+  	color: #999999;
+}
+
+@media only screen and (max-width: 1400px) {
+  .wrapper-sidenav a {
+    font-size: 16px;
+  }
+}
+
+.wrapper-sidenav li a:hover, .wrapper-sidenav li a:focus
+ {
+	color: #494949;
+	font-weight: 600;
+}
+
+
+ /*Income meter*/
+
+
+ .income-meter {
+ 	bottom: 0;
+ 	left: 0;
+ 	width: 100vw;
+ 	height: 7.5vh; 
+ 	border-top: 1px solid #b3b3b3;
+}
+
+.income-meter-text {
+	color: #b3b3b3;
+	font-weight: 600;
+	display: flex;
+	justify-content: center;
+}
+
+.income-meter-number {
+	font-size: 24px;
+	display: flex;
+	justify-content: center;
+}
+
+@media only screen and (max-width: 1400px) {
+  .income-meter-number {
+    font-size: 20px;
+  }
+}
+
+/*Main*/
+section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+ .without-incomemeter {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 91vh;
+
+}
+
+p, h2 {
+	text-align: center;
+}
+
+/*p {
+	width: 30vw;
+}*/
+
+/*Start*/
+
+.start-text {
+	width: 30vw;
+	margin-bottom: 10px;
+}
+
+
+/*About you*/
+.radio-buttons {
+	display: flex;
+	flex-direction: column;
+	align-items: center
+}
+
+
+
+.radio-buttons input {
+	opacity: 0;
+  	position: fixed;
+  	width: 0;
+}
+
+
+.radio-buttons label {
+	width: 320px;
+	height: 11vh;
+	margin-bottom: 15px;
+	padding: 10px 22px 0px 10px;
+	border-radius: 10px;
+	border: solid 1px #979797;
+}
+
+
+@media only screen and (min-width: 1400px) {
+  .radio-buttons label {
+    width: 451px;
+	height: 7vh;
+	margin-bottom: 15px;
+  }
+}
+
+.radio-buttons input[type="radio"]:checked + label {
+    background-color: #797979;
+    color: white;
+}
+
+
+/*concerts*/
+
+
+/*Streaming*/
+
+
+#streaming p {
+	margin-top: 10px;
+	margin-bottom: 7px;
+	text-align: left;
+}
+
+@media only screen and (max-width: 1400px) {
+  #streaming p {
+    margin-top: 5px;
+	margin-bottom: 0px;
+  }
+}
+
+.icons-streaming {
+	vertical-align: middle;
+	width: 40px;
+	height: 40px;
+}
+
+.number {
+	margin-right: 40px;
+}
+
+.number p {
+	margin-left: 40px;
+}
+
+@media only screen and (max-width: 1400px) {
+#streaming-title {
+	margin: 12px; 
+	}
+}
+/*Icons*/
+
+.icons {
+    padding: 25px;
+    width: 90px;
+    height: 90px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: #D8D8D8;
+}
+
+@media only screen and (max-width: 1400px) {
+.icons {
+	padding: 15px;
+    width: 65px;
+    height: 65px;
+	}
+}
+
+/*.icons img {
+	margin-left: auto;
+  	margin-right: auto;
+  	display: block;
+}*/
+
+img {
+	width: 90px;
+	
+}
+
+@media only screen and (max-width: 1400px) {
+img {
+    width: 65px;
+	}
+}
+
+/*Button*/
+
+.button {
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: black;
+}
+
+.button a {
+	color: white;
+	
+}
+
+.button {
+	margin-top: 15px;
+}
+
+@media only screen and (min-width: 1400px) {
+  .button {
+    margin-top: 30px;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .button {
+    width: 180px;
+  height: 44px;
+  }
+}
+
+
+/*Results*/
+
+.icons-result {
+	width: 40px;
+}
+
+.results-breakdown {
+	width: 25vw;
+	display: flex;
+	align-items: center;
+}
+
+.results-breakdown p {
+	white-space: nowrap;
+}
+
+#results-breakdown {
+	padding: 0;
+}
+
+.results-breakdown span {
+	font-size: 18px;
+	color: #494949;
+	margin-left: auto;
+}
+
+@media only screen and (max-width: 1400px) {
+  .results-breakdown span {
+    font-size: 15.5px;
+  }
+}
+
+
+#finalTotalResult {
+	font-weight: 600;
+}
+
+
+/*Input*/
+
+
+input {
+	width: 200px;
+	height: 44px;
+	border: solid 1px #979797;
+	border-radius: 5px;
+	color: #494949;
+}
+
+@media only screen and (max-width: 1400px) {
+  input {
+    width: 180px;
+	height: 34px;
+  }
+}
+
+
+
+ .input-euro {
+    position: relative;
+    font-family: EuclidSquare;
+  	font-size: 18px;
+  	font-weight: 600;
+  	padding: 0;
+ }
+
+ ::placeholder {
+ 	color: #494949;
+ 	padding-left: 10px;
+ }
+
+
+
+
+
+ .input-euro.right input {
+    text-align:left; 
+    font-family: EuclidSquare;
+  	font-size: 18px;
+  	font-weight: 600;
+  	padding:0;
+  	color: #494949;
+ }
+
+ @media only screen and (max-width: 1400px) {
+ 	.input-euro, .input-euro.right input {
+ 		font-size: 15.5px;
+ 	}
+ }
+
+ .input-euro:before {
+     position: absolute;
+     top: 0;
+     content:"€";
+ }
+ 
+ .input-euro.right:before {
+     right: 5px;
+ }
+
+ /* Chrome, Safari, Edge, Opera - remove arrows from input field*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+#totalConcertsResult,#totalDownloadsResult,#totalStreamingResult  {
+	border: none;
+	text-align: center;
+	font-family: EuclidSquare;
+  	font-size: 24px;
+  	font-weight: 600;
+}

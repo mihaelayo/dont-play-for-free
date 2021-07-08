@@ -1,0 +1,224 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+ 	<nav class="wrapper-sidenav">
+		<ul>
+		  <li ><a href="#start">Start</a></li>
+		  <li ><a href="#aboutyou">About you</a></li>
+		  <li ><a href="#concerts">Live concerts</a></li>
+		  <li ><a href="#downloads">Digital dowloads</a></li>
+		  <li ><a href="#streaming">Streaming</a></li>
+		  <li ><a href="#merch">Merchandise</a></li>
+		  <li ><a href="#result">Result</a></li>
+	  </ul>
+	</nav>
+
+	<div class="wrapper-main">
+		<section id="start">
+				<div class="icons">
+		    		<img src="main-icon.svg">
+		    	</div>
+		    	<div class="title">
+			 		<h2>Artist Income Calculator</h2>
+				</div>
+				<div class="start-text">
+			 		<p>With this calculator you can find out how much money you can make with your music.</p>
+				</div>
+			  	<button class="button">
+			  	<a href="#aboutyou">GET STARTED</a>
+			  	</button>
+			  	<br>
+			  	<br>
+		</section>
+
+		<section id="aboutyou">
+	    	<div class="icons">
+	    		<img src="icon-profile.svg">
+	    	</div>
+			<h2>About you</h2>
+				<div class="radio-buttons">	
+					  <p>What stage is your music career?</p>
+
+						  <input id="pro" type="radio" name="career" value="Professional" required>
+						  <label for="pro"><strong>Professional</strong><br>You play music at a professional level and it’s your main source of income</label>
+
+						  <input id="est" type="radio" name="career" value="Established">
+						  <label for="est"><strong>Established</strong><br>You play music at a professional level but it’s not your main source of income</label>
+
+						  <input id="up" type="radio" name="career" value="Up-and-coming">
+						  <label for="up"><strong>Up and coming</strong><br>You are still working towards establishing a professional music career</label>
+					  <br>
+				</div>	
+				<button class="button">
+			  		<a href="#concerts">CONTINUE</a>
+			  	  </button>  
+		</section>
+
+		<section id="concerts">
+			<div class="concerts without-incomemeter">
+				<div class="icons">
+		    		<img src="icon-concerts.svg">
+		    	</div>
+				<h2>Live concerts</h2>
+				<p>How many concerts do you play every month on average?</p>
+				  	<span class=numberconcerts>
+			    		<input id="aConcerts" class="input-euro right" type="number" placeholder="0" oninput="calcConcerts();">
+					</span>
+				<p>How much is your average profit per concert?</p>	
+				<div class="input-icon input-icon-right"> 
+					<span class="input-euro right">
+			    		<input id="bConcerts" type="number" placeholder="0" oninput="calcConcerts();">
+					</span>
+				</div>	
+				<br>
+				<button class="button">
+				  	<a href="#downloads">CONTINUE</a>
+				</button>
+			</div>	
+			<div class="income-meter">
+				<div class="income-meter-text">Income meter</div>
+				<div class="income-meter-number"><input type="number" id="totalConcertsResult" class="input-euro right"></input></div>
+
+			</div>
+		</section>
+
+		<section id="downloads">
+			<div class="downloads without-incomemeter">
+				<div class="icons">
+		    		<img src="icon-download.svg">
+		    	</div>
+				<h2>Digital downloads</h2>
+				<p>How many dowloads do you have montly?</p>
+				<span class=numberdownloads>
+			    	<input id="aDownloads" type="number" class="input-euro right" placeholder="0" oninput="calcDownloads();">
+				</span>
+				<p>How much is your average profit per downloaded song?</p>  
+				<div class="input-icon input-icon-right"> 
+					<span class="input-euro right">
+			    		<input id="bDownloads" type="number" placeholder="0" oninput="calcDownloads();">
+					</span>
+				</div>
+				<br>
+				<button class="button">
+				  	<a href="#streaming">CONTINUE</a>
+				</button>
+			</div>
+			<div class="income-meter">
+				<div class="income-meter-text">Income meter</div>
+				<div class="income-meter-number"><input type="number" id="totalDownloadsResult" value="0" class="input-euro right"></div>
+			</div>	
+		</section>
+
+		<section id="streaming">
+			<div class="streaming without-incomemeter">
+				<div class="icons">
+		    		<img src="icon-streaming.svg">
+		    	</div>
+				<h2 id="streaming-title">Streaming</h2>
+				<p>How many streams do you have on the following platforms monthly?</p>
+				<br>
+						<span class="number spotify">
+							<p>Spotify</p>
+							<img class="icons-streaming" src="icon-spotify.svg">
+			    			<input id="spotifyProfit" type="number" class="input-euro right" placeholder="0" oninput="calcStreaming();">
+						</span>
+						<span class="number youtube">
+							<p>Youtube</p>
+							<img class="icons-streaming" src="icon-youtube.svg">
+			    			<input id="youtubeProfit" type="number" class="input-euro right" placeholder="0" oninput="calcStreaming();">
+						</span>
+						<span class="number apple">
+							<p>Apple music</p>
+							<img class="icons-streaming" src="icon-apple.svg">
+			    			<input id="appleProfit" type="number" class="input-euro right" placeholder="0" oninput="calcStreaming();">
+						</span>
+						<span class="number tidal">
+							<p>Tidal</p>
+							<img class="icons-streaming" src="logo-tidal.svg">
+			    			<input id="tidalProfit" type="number" class="input-euro right" placeholder="0" oninput="calcStreaming();">
+						</span>
+						<span class="number tidal">
+							<p>Soundcloud</p>
+							<img class="icons-streaming" src="icon-soundcloud.svg">
+			    			<input id="soundcloudProfit" type="number" class="input-euro right" placeholder="0" oninput="calcStreaming();">
+						</span>
+						<br>
+				<button class="button">
+				  	<a href="#merch">CONTINUE</a>
+				</button>
+			</div>
+			<div class="income-meter">
+				<div class="income-meter-text">Income meter</div>
+				<div class="income-meter-number"><input type="number" id="totalStreamingResult" class="input-euro right"></div>
+			</div>	
+		</section>
+
+		<section id="merch">
+			<div class="merch without-incomemeter">
+				<div class="icons">
+		    		<img src="icon-merch.svg">
+		    	</div>
+				<h2>Merchandise</h2>
+					<p>How much profit from merch do you make monthly</p>
+
+					<div class="input-icon input-icon-right"> 
+						<span class="input-euro right">
+				    		<input id="merchProfit" type="number" placeholder="0" oninput="calcMerch();">
+						</span>
+					</div>
+
+					<br>
+				<button class="button">
+				  	<a href="#result">SHOW RESULT</a>
+				</button>
+			</div>
+		
+		</section>
+
+		<section id="result">
+			<h2 id="result-title">You make a total of €<span id="totalResult"></span> pr month</h2>
+			<h3>Well done, here is an overview of your sources of income.</h3>
+				<div id="results-breakdown">
+						<span class="results-breakdown">
+							<img class="icons-result" src="icon-concerts.svg">
+							<p>Live concerts</p>
+							<span id="finalConcertsResult">0</span>
+						</span>
+						<span class="results-breakdown">
+							<img class="icons-result" src="icon-download.svg">
+							<p>Digital downloads</p>
+							<span id="finalDownloadsResult">0</span>
+						</span>
+						<span class="results-breakdown">
+							<img class="icons-result" src="icon-streaming.svg">
+							<p>Streaming</p>
+							<span id="finalStreamingResult">0</span>
+						</span>
+						<span class="results-breakdown">
+							<img class="icons-result" src="icon-merch.svg">
+							<p>Merchandise</p>
+							<span id="finalMerchResult">0</span>
+						</span> 
+						<span class="results-breakdown">
+							<img class="icons-result" src="">
+							<p>Total</p>
+							<span id="finalTotalResult">0</span>
+						</span>
+				</div>		
+			<h3>Get the result and suggestions on how you can up your income</h3>
+			<button class="button">
+				  	<a href="">GET MY RESULT</a>
+			</button>
+		</section>
+
+	</div>
+			
+	<script type="text/javascript" src="script.js"></script>
+
+
+</body>
+</html>
